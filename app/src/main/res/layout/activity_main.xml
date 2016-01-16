@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.something.mgriego.somethingsomething.MainActivity"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Number of\nDice:"
+            android:id="@+id/numberDice"
+            android:layout_weight="2"
+            android:textSize="15dp"
+            android:textColor="#757575"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/numDiceText"
+            android:layout_weight="2"
+            android:layout_gravity="bottom"
+            android:maxLength="3" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Number of Sides:"
+            android:id="@+id/numberSides"
+            android:layout_weight="2"
+            android:textSize="15dp"
+            android:textColor="#757575"
+            android:layout_gravity="center_vertical" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/numSidesSpiner"
+            android:spinnerMode="dropdown"
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Add\nDice"
+            android:drawableLeft="@drawable/gambling23"
+            android:drawablePadding="15dp"
+            android:id="@+id/addDiceButton"
+            android:paddingRight="60dp"
+            android:paddingLeft="40dp"
+            android:background="#8c9eff"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Roll!"
+            android:id="@+id/rollButton"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@drawable/dice21"
+            android:drawablePadding="10dp"
+            android:elegantTextHeight="false"
+            android:paddingLeft="60dp"
+            android:paddingRight="40dp"
+            android:background="#536dfe"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:choiceMode="none"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Total Result:"
+        android:id="@+id/totalResult"
+        android:layout_weight=".5"
+        android:textSize="25dp"
+        android:textColor="#757575"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight=".5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Crits:"
+            android:id="@+id/critText"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Failures:"
+            android:id="@+id/failText"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:textColor="#757575" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Average:"
+            android:id="@+id/averageText"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:textColor="#757575" />
+    </LinearLayout>
+
+</LinearLayout>
