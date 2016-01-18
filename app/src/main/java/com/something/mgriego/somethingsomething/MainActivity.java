@@ -278,6 +278,8 @@ public class MainActivity extends AppCompatActivity {
                     numD20 = 0;
                     numD50 = 0;
                     numD100 = 0;
+                    TextView numberText = (TextView) findViewById(R.id.diceQueueText);
+                    numberText.setText("");
                 } else {
                     Toast.makeText(getApplicationContext(), "Enter a number of dice between 1 and 999",
                             Toast.LENGTH_SHORT).show();
@@ -341,6 +343,12 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                             break;
                     }
+
+                    TextView numberText = (TextView) findViewById(R.id.diceQueueText);
+                    String diceQueue = "Dice Queue: " + numD2 + "d2, " + numD4 + "d4, " + numD6 + "d6, " + numD8 + "d8, " + numD10 + "d10, "
+                            + numD12 + "d12, " + numD20 + "d20, " + numD50 + "d50, " + numD100 + "d100";
+                    numberText.setText(diceQueue);
+
                 } else {
                     Toast.makeText(getApplicationContext(), "Enter a number of dice between 1 and 999",
                             Toast.LENGTH_SHORT).show();
